@@ -16,7 +16,7 @@ kind: CronJob
 metadata:
   name: model-trainer-job
 spec:
-  schedule: # TODO: implement a cron spec that runs every 1-2 minutes
+  schedule: "* * * * *"
   concurrencyPolicy: Forbid  # Don't start new job if previous still running
   successfulJobsHistoryLimit: 5         # keep only 5 (keep disk util low)
   failedJobsHistoryLimit: 5             # keep no more than 5 (keep disk util low)    
